@@ -30,7 +30,7 @@ const TableComp = ({countries, countryNames}) => {
               <td>{country.name}</td>
               <td>{country.continent}</td>
               <td>{country.rank}</td>
-              <td><img src={`${process.env.PUBLIC_URL}/${country.flag}` } alt=""></img></td>
+              <td><img src={country.flag?`${process.env.PUBLIC_URL}/${country.flag}`:  `${process.env.PUBLIC_URL}/images/zimbabwe.png`} alt=""></img></td>
             </tr>
           ))}
           
